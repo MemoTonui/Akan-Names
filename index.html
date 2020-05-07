@@ -4,6 +4,9 @@
         <title>Birthday</title>
         <link rel="stylesheet" href="CSS/bootstrap-4.3.1-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/style.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+        crossorigin="anonymous"></script>
+        <script src="JS/script.js"></script>
     </head>
     <body>
         <div class="container">
@@ -23,7 +26,7 @@
                 </div>
                 <div class=form-group>
                   <label for="year">Year of birth</label>
-                  <input type="number" class="form-control" id="year" placeholder="Which year were you born?">
+                  <input  type="number" class="form-control" id="year" value="year"placeholder="Which year were you born?">
                 </div>
                 <div class="form-group">
                     <label for="month">Month Born</label>
@@ -44,25 +47,22 @@
                   </div>
                   <div class="form-group">
                     <label for="date">Day Born</label>
-                    <input  type="number" class="form-control" id="date" placeholder="Whic day were you Born?">
+                    <input  type="number" class="form-control" id="date" placeholder="Which date were you Born?">
                   </div>
                   <div class=form-group>
                     <label>Gender</label>
                     <div class="radio">
-                      <label>
+                      <label class="radio-inline">
                         <input type="radio" name="optionsRadios" id="male" value="option1" checked>
+                        Male
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="optionsRadios" id="female" value="option2">
                         Female
                       </label>
                     </div>
-          
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="optionsRadios" id="female" value="option2">
-                        Male
-                      </label>
-                    </div>
                   </div>
-                  <button type="submit" class="btn btn-success">Submit</button>
+                  <button onclick="year()" type="submit" class="btn btn-success">Submit</button>
           
               </form>
         </div>

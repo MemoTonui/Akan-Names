@@ -35,6 +35,10 @@ body, html {
         background-color: black;
         color: white;
     }
+    button {
+        margin-bottom: 30px;
+        letter-spacing: 0.2em;
+    }
 
     
      

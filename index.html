@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Birthday</title>
+      
         <link rel="stylesheet" href="CSS/bootstrap-4.3.1-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/style.css">
         
@@ -29,23 +30,9 @@
                 </div>
                 <div class="form-group">
                     <label for="month">Month Born</label>
-                    <input  type="number" class="form-control"placeholder="Which month were you born?">
-                    <div class="month">
-                    <select class="form-control" id="month">
-                      <option id="one">January</option>
-                      <option id="two">February</option>
-                      <option id="three">March</option>
-                      <option id="four">April</option>
-                      <option id="five">May</option>
-                      <option id="six">June</option>
-                      <option id="seven">July</option>
-                      <option id="eight">August</option>
-                      <option id="nine">September</option>
-                      <option id="ten">October</option>
-                      <option id="eleven">November</option>
-                      <option id="twelve">December</option>
-                    </select>
-                  </div>
+                    <input  type="number" class="form-control" id= 'month' placeholder="Which month were you born?"
+                    data-container="body" data-toggle="popover" data-placement="right" data-content="Invalid Input">
+
                 </div>
                   <div class="form-group">
                     <label for="date">Day Born</label>
@@ -55,7 +42,7 @@
                     <label>Gender</label>
                     <div class="radio">
                       <label class="radio-inline">
-                        <input type="radio" name="optionsRadios" id="male" value="option1" checked>
+                        <input type="radio" name="optionsRadios" id="male" value="option1" >
                         Male
                       </label>
                       <label class="radio-inline">
@@ -64,24 +51,33 @@
                       </label>
                     </div>
                   </div>
-                  <button onclick="akanName()" type="submit" class="btn btn-dark" data-toggle="modal" data-target=".bs-example-modal-lg">Get Your Akan Name</button>
-                 
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                    <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <p>
-                        Hi :D <br>
-                        Your Akan Name is: 
-                       </p>
+                  <button type="submit"  class="btn btn-dark" onclick="akanName();" aria-hidden="true"  data-toggle="modal" data-target="#myModal">Get Your Akan Name</button>
+
+                  <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                  
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Your Akan Name</h4>
+                        </div>
+                        <div class="modal-body">
+                          
+                        </div>
+                      </div>
+                  
                     </div>
-                  </div>
-                </div>
-          
+                  </div>                  
+                  
+                  <button type="reset" class="btn btn-danger" onclick="clear();" aria-hidden="true">Clear</button>
+
               </form>
         </div>
       </div>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
-        crossorigin="anonymous"></script>
+      crossorigin="anonymous"></script>
+      <script src="CSS/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
       <script src="JS/script.js"></script>
     </body>
 </html>

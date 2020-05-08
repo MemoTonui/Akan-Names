@@ -1,40 +1,71 @@
+$(document).ready(function(){
+    $(document).submit(function akanNameRun(event) {
+        event.preventDefault();
+        
+
+        
+    });
+
+});
 const CURRENTYEAR = 2020;
 const maleAkanName = ['Kwasi','Kwadwo','Kwadena','Kwanu','Yaw','Kofi','Kwame'];
 const femaleAkanName = ['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama'];
 const days = ['Sunday','Monday','Teusday','Wednesday','Thursday','Friday','Saturday'];
-var yearBorn = document.getElementById('year');
-var age = document.getElementById('age');
-var centuryDigits ;
-var yearDigits;
-var month ;
-var dayOfMonth = document.getElementById('date');
+var yearBorn = document.getElementById('year').value;
+var age = parseInt(document.getElementById('age')).value;
+var centuryDigits =parseInt(yearBorn.substring(0,2)) ;
+var yearDigits = parseInt(yearBorn.substring(2,4));
+var dayOfMonth = parseInt(document.getElementById('date')).value;
+var month= parseInt(document.getElementById('month')).value;
+var gender = document.getElementsByName('optionRadios').value;
 
 
-var year1 = function (age,yearBorn) {
    
-    if(CURRENTYEAR-yearBorn !== age){
-        alert("please re-enter your age or year of birth");
-        
-}
-var daysOfTheWeek= function() {
-    dayOfTheWeek = ((((centuryDigits/4)- 2*centuryDigits-1)+(5*yearDigits/4)+(26 * (month+1)/10)+dayOfMonth)% 7);
-    Math.floor(dayOfTheWeek);
-}
-var akanName = function(event) {
-    event.preventDefault();
 
-    if (yearBorn || age === ' ' ){
-        year1();
-        alert('Kindly Fill in all the blanks');
+
+function  validation(){
+    if (yearBorn ===" "){
+        alert("Please fill!!");
+        
+    }
+    else if(month === ""){
+        alert("Please fill!!");
+       
+        
+    }
+    else if(dayOfMonth=== ""){
+        alert("Please fill!!");
+        
+    }
+    else if (month > 12|| month<0){
+        alert('Please input a correct month')
+    }
+    else if(CURRENTYEAR-yearBorn !== age){
+        alert("please re-enter your age or year of birth");
+        return false;
+    }
+    else if (dayOfMonth<0 || dayOfMonth >31){
+        alert("Invalid Date.");
+       
     }
     else{
-        var male = document.getElementById('male');
-        var female = document.getElementById('female');
-        var result;
-        if (result = male) {
+    return true;
+    }
+}
+var daysOfTheWeek= function() {
+    
+    dayOfTheWeek = ((((centuryDigits/4)- 2*centuryDigits-1)+(5*yearDigits/4)+(26 * (month+1)/10)+dayOfMonth)% 7);
+    
+}
+ var akanName = function() {
+    validation();
+        
+        if(gender[0].checked==true){
+
+        if (gender.value==="male" ) {
             
         
-        switch (Math.floor(dayOfTheWeek)) {
+        switch (daysOfTheWeek) {
                 case 1:
                 alert("You were born on " +days[0] + "and Your Akan Name is " +maleAkanName[0]);
                 break;
@@ -62,8 +93,9 @@ var akanName = function(event) {
                 break;
         }
     }
-    else {
-        switch (Math.floor(dayOfTheWeek)) {
+    else if (gender[1].checked = true){
+    if(gender.value=="female") {
+        switch (daysOfTheWeek) {
             case 1:
             alert("You were born on " +days[0] + "and Your Akan Name is " +femaleAkanName[0]);
             break;
@@ -87,16 +119,29 @@ var akanName = function(event) {
             break;
     
         default:
-            alert('Please Re - enter Yout Information again.');
+            alert('Please Re - enter Your Information again.');
             break;
     }
+}
 
     }
+    else {
+        alert("You must Pick a gender!!!")
+    }
+}
+}
+
+function clear(){
+    document.getElementByClass('form-control').innerHTML = "";
+}
+
             
+        
+
+    function getMyAkan() {
+    
+        akanName ();
         
     }
 
-    
-    
-}
-}
+

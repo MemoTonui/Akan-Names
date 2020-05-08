@@ -4,9 +4,8 @@
         <title>Birthday</title>
         <link rel="stylesheet" href="CSS/bootstrap-4.3.1-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/style.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
-        crossorigin="anonymous"></script>
-        <script src="JS/script.js"></script>
+        
+        
     </head>
     <body >
       
@@ -20,10 +19,6 @@
               </p>
 
               <form>
-                <div class="form-group">
-                  <label for="yourName">Full Name</label>
-                  <input type="text" class="form-control" id="yourName" placeholder="Enter Your Name">
-                </div>
                 <div class="form-group">
                   <label for="age">Age</label>
                   <input type="number" class="form-control" id="age" placeholder="How old are you?">
@@ -66,10 +61,24 @@
                       </label>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-success">Submit</button>
+                  <button onclick="akanName()" type="submit" class="btn btn-dark" data-toggle="modal" data-target=".bs-example-modal-lg">Get Your Akan Name</button>
+                 
+                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                    <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <p>
+                        Hi :D <br>
+                        Your Akan Name is: 
+                       </p>
+                    </div>
+                  </div>
+                </div>
           
               </form>
         </div>
       </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+        crossorigin="anonymous"></script>
+      <script src="JS/script.js"></script>
     </body>
 </html>

@@ -1,4 +1,5 @@
 # READ ME
+
 This project takes the user's birthday date and returns their Akan Name
 
 ## Author's Name
@@ -23,7 +24,10 @@ Linda Tonui
 - Open index.html on the browser
 
 ## Bugs And Errors
-Incase you identify any bugs or errors, please don't hesitate to reach out to me via the email
+Returns Nan for All inputs.
+
+ ## Collaboration
+To collaborate with me please reach out using the following email address.
 `tonuilinda@gmail.com`
 
 

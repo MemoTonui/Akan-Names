@@ -28,6 +28,6 @@ Incase you identify any bugs or errors, please don't hesitate to reach out to me
 
 
 # Link to live site on Git Hub Pages
-
+`https://memotonui.github.io/Akan-Names/`
 
 

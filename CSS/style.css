@@ -30,16 +30,22 @@ body, html {
     padding: 10px;
     
 
-    }
-    input {
-        background-color: black;
-        color: white;
-    }
-    button {
+}
+button {
         margin-bottom: 30px;
         letter-spacing: 0.2em;
     }
-
+.modal-dialog {
+        display: none;
+    }
+.modal-header {
+        
+        margin-left: unset;
+        text-transform: uppercase;
+        color: goldenrod;
+        letter-spacing: 0.6em;
+        font-weight: 800;
+    }
     
      
 @media screen and (max-width:600px){

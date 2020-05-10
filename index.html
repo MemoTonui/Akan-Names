@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Birthday</title>
-      
+        <title>Akan Name</title>
         <link rel="stylesheet" href="CSS/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="CSS/style.css">
-        
-        
+        <link rel="stylesheet" href="CSS/style.css"> 
     </head>
     <body >
       
@@ -22,21 +19,20 @@
               <form>
                 <div class="form-group">
                   <label for="age">Age</label>
-                  <input type="number" class="form-control" id="age" placeholder="How old are you?">
+                  <input type="text" class="form-control" id="age" placeholder="How old are you?">
                 </div>
                 <div class=form-group>
                   <label for="year">Year of birth</label>
-                  <input  type="number" class="form-control" id="year" value="year"placeholder="Which year were you born?">
+                  <input  type="text" class="form-control" id="year" placeholder="Which year were you born?">
                 </div>
                 <div class="form-group">
                     <label for="month">Month Born</label>
-                    <input  type="number" class="form-control" id= 'month' placeholder="Which month were you born?"
-                    data-container="body" data-toggle="popover" data-placement="right" data-content="Invalid Input">
+                    <input  type="text" class="form-control" id= "month" placeholder="Which month were you born?">
 
                 </div>
                   <div class="form-group">
                     <label for="date">Day Born</label>
-                    <input  type="number" class="form-control" id="date" placeholder="Which date were you Born?">
+                    <input  type="text" class="form-control" id="date" placeholder="Which date were you Born?">
                   </div>
                   <div class=form-group>
                     <label>Gender</label>
@@ -51,28 +47,10 @@
                       </label>
                     </div>
                   </div>
-                  <button type="submit"  class="btn btn-dark" onclick="akanName();" aria-hidden="true"  data-toggle="modal" data-target="#myModal">Get Your Akan Name</button>
-
-                  <div id="myModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-                  
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title">Your Akan Name</h4>
-                        </div>
-                        <div class="modal-body">
-                          
-                        </div>
-                      </div>
-                  
-                    </div>
-                  </div>                  
-                  
+                  <button type="submit" id="submit" class="btn btn-dark" onclick="getMyName();" aria-hidden="true">Get Your Akan Name</button>
                   <button type="reset" class="btn btn-danger" onclick="clear();" aria-hidden="true">Clear</button>
-
-              </form>
+                  <p id="result"></p>
+              </form>  
         </div>
       </div>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 

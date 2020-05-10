@@ -22,7 +22,7 @@ p{
    margin-left:300px;  
 }
 body, html {
-    background:url("/home/tonui/Documents/Moringa-School-Projects/Akan Name/Image/Africa.jpeg") no-repeat  fixed ;
+    background:url("Africa.jpeg") no-repeat  fixed ;
     color:rgb(20, 5, 34);
     background-size:cover;
     background-position: center;
